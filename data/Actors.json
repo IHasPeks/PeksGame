@@ -7,5 +7,5 @@ null,
 {"id":5,"battlerName":"Rugo","characterIndex":0,"characterName":"Rugo","classId":5,"equips":[32,0,0,0,0],"faceIndex":0,"faceName":"Rugo","traits":[],"initialLevel":1,"maxLevel":1,"name":"Rugo","nickname":"","note":"","profile":""},
 {"id":6,"battlerName":"Flauen","characterIndex":0,"characterName":"Flauen","classId":6,"equips":[31,0,0,0,0],"faceIndex":0,"faceName":"flauen","traits":[],"initialLevel":1,"maxLevel":1,"name":"Flauenn","nickname":"","note":"","profile":""},
 {"id":7,"battlerName":"Blob","characterIndex":0,"characterName":"Blob","classId":7,"equips":[39,0,0,0,0],"faceIndex":0,"faceName":"Blob","traits":[],"initialLevel":1,"maxLevel":1,"name":"Wobin","nickname":"","note":"","profile":""},
-{"id":8,"battlerName":"Rugo","characterIndex":2,"characterName":"Monster","classId":8,"equips":[32,0,52,8,0],"faceIndex":2,"faceName":"Monster","traits":[{"code":23,"dataId":2,"value":0}],"initialLevel":1,"maxLevel":1,"name":"Murphy","nickname":"","note":"","profile":""}
+{"id":8,"battlerName":"Peks","characterIndex":3,"characterName":"Nature","classId":8,"equips":[32,0,52,8,0],"faceIndex":3,"faceName":"Nature","traits":[{"code":23,"dataId":2,"value":0}],"initialLevel":1,"maxLevel":1,"name":"Murphy","nickname":"","note":"","profile":""}
 ]
