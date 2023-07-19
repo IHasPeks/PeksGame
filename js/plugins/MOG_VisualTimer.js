@@ -364,50 +364,50 @@ TimerGauge.prototype.createLayout = function() {
 //==============================
 // * create Number
 //==============================
-TimerGauge.prototype.createNumber = function() {
-	 this._fieldNumber = new Sprite();
-	 this._fieldNumber.rotation = Moghunter.timerGauge_NumberAngle * Math.PI / 180;
-	 this.addChild(this._fieldNumber);
-	 this._numbers = [];
-	 for (var i = 0; i < 4; i++) {
-	      this._numbers[i] = new Sprite(this._numberImg);
-		  this._fieldNumber.addChild(this._numbers[i]);
-	 };
+TimerGauge.prototype.createNumber = function () {
+	this._fieldNumber = new Sprite();
+	this._fieldNumber.rotation = Moghunter.timerGauge_NumberAngle * Math.PI / 180;
+	this.addChild(this._fieldNumber);
+	this._numbers = [];
+	for (var i = 0; i < 4; i++) {
+		this._numbers[i] = new Sprite(this._numberImg);
+		this._fieldNumber.addChild(this._numbers[i]);
+	};
 };
 
 //==============================
 // * Seconds
 //==============================
-TimerGauge.prototype.seconds = function() {
+TimerGauge.prototype.seconds = function () {
 	var v = Math.floor(this._seconds % 60);
-    if (Math.floor($gameTimer._frames) > 0) {v += 1}
+	if (Math.floor($gameTimer._frames) > 0) { v += 1 }
 	return v;
 };
 
 //==============================
 // * minutes
 //==============================
-TimerGauge.prototype.minutes = function() {
+TimerGauge.prototype.minutes = function () {
 	return Math.floor(this._seconds / 60);
-};	
+};
 
 //==============================
 // * refresh  Timer
 //==============================
-TimerGauge.prototype.refreshTimer = function() {
-	 var oldSec = this._seconds;
-     this._seconds = $gameTimer.seconds();
-	 if (this._numbers) {
-	     for (var i = 0; i < this._numbers.length; i++) {
-	          this.refreshNumber(this._numbers[i],i);
-	     };
-	 };
+TimerGauge.prototype.refreshTimer = function () {
+	var oldSec = this._seconds;
+	this._seconds = $gameTimer.seconds();
+	if (this._numbers) {
+		for (var i = 0; i < this._numbers.length; i++) {
+			this.refreshNumber(this._numbers[i], i);
+		};
+	};
 };
 
 //==============================
 // * refresh Number
 //==============================
-TimerGauge.prototype.refreshNumber = function(sprite,index) {
+TimerGauge.prototype.refreshNumber = function (sprite, index) {
 	var cw = this._dataImg2[0];
 	var ch = this._dataImg2[1];
 	if (index > 1) {
@@ -421,9 +421,9 @@ TimerGauge.prototype.refreshNumber = function(sprite,index) {
 		var n = Math.abs(this.seconds()).toString().split("");
 		var value = n < 10 ? (index === 0 ? n[1] : n[0]) : (index === 0 ? n[0] : n[1]);
 	};
-	var valueReal = value ? value : 0;	
+	var valueReal = value ? value : 0;
 	var v = valueReal * cw;
-    sprite.setFrame(v,0,cw,ch);
+	sprite.setFrame(v, 0, cw, ch);
 	sprite.x = x;
 	sprite.y = y;
 };
@@ -447,7 +447,7 @@ TimerGauge.prototype.createGauge = function() {
 TimerGauge.prototype.updateGauge = function() {
 	var cw = this._dataImg3[0];
 	var ch = this._dataImg3[1];
-    var meter_rate = Math.floor(cw * $gameTimer._frames / $gameTimer._framesMax);
+    var meter_rate = math.floor(cw * $gameTimer._frames / $gameTimer._framesMax);
 	this._gauge.setFrame(0,0, meter_rate, ch);
 };
 
