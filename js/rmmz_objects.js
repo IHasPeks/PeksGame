@@ -5444,7 +5444,7 @@ Game_Party.prototype.allBattleMembers = function() {
 };
 
 Game_Party.prototype.maxBattleMembers = function() {
-    return 7;
+    return 4;
 };
 
 Game_Party.prototype.leader = function() {
